@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
-function Intro() {
-  return (
-    <div>Intro</div>
-  )
+function TransactionForm() {
+	return <div>TransactionForm</div>;
 }
 
-export default Intro
+export default TransactionForm;

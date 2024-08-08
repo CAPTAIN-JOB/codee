@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import TransactionForm from "./TransactionForm";
 export const url = "http://localhost:3000/transactions";
 const Transaction = ({ search }) => {
 	const [data, setData] = useState([]);
@@ -11,6 +12,7 @@ const Transaction = ({ search }) => {
 
 	return (
 		<div>
+			<TransactionForm />
 			<table className="shadow-2xl rounded-lg p-8 m-4 w-full border-collapse">
 				<thead className="bg-gray-200">
 					<tr className="text-left border-b-2 border-gray-300">
@@ -25,7 +27,7 @@ const Transaction = ({ search }) => {
 						.filter(
 							(data) =>
 								search === "" ||
-								search.category.toLowerCase().includes(search.toLowerCase())
+								data.category.toLowerCase().includes(search.toLowerCase())
 						)
 						.map((item) => (
 							<tr key={item.id} className="hover:bg-gray-100">
