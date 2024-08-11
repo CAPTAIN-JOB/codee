@@ -12,7 +12,7 @@ const Transaction = ({ search }) => {
 
 	return (
 		<div>
-			<TransactionForm />
+			<TransactionForm data={data} setData={setData} />
 			<table className="shadow-2xl rounded-lg p-8 m-4 w-full border-collapse">
 				<thead className="bg-gray-200">
 					<tr className="text-left border-b-2 border-gray-300">
